@@ -304,7 +304,7 @@ ifeq ($(COMPILER), intel)
 	ifeq ($(CAF_MODE), single)
 		CAF_FLAG=-coarray=single
 	else
-		CAF_FLAG=-coarray=distributed
+		CAF_FLAG=-coarray=distributed -coarray-config-file=run_configuration_file.txt
 		LINKER=mpiifort
 	endif
 endif
